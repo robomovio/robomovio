@@ -1,50 +1,53 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Luckiest Guy', sans-serif;
     background-size: 100vw 100vh;
-    background-image: linear-gradient(-30deg, #d6b80d, #dd0000 25%, #2d0038 85%);
+    background-image: linear-gradient(-30deg, #d6b80d, #dd0000 30%, #2d0038 85%);
     color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 
 .jumps {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    left: 50px;
+    left: 0px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     font-size: 24px;
-    font-family: 'Luckiest Guy', sans-serif;
 }
 
 .jumps div {
+    transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: start;
+    padding: 10px 20px 10px 20px;
+    background-image: linear-gradient(to right, #2d0038, #65007e);
+    border-radius: 0 50px 50px 0;
+    gap: 20px;
     cursor: pointer;
+    width: fit-content;
+    max-width: 40px;
+    overflow: hidden;
+}
+
+.jumps div:hover {
+    max-width: 100%;
 }
 
 .jumps div i {
     font-size: 35px;
-    margin: 5px;
 }
 
 .jumps div p {
-    display: none;
-    margin: 5px;
+    transition: all 0.3s ease-in-out 0.15s;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
 }
 
-@media screen and (max-width: 600px) {
-    .jumps {
-        /*border: red 2px solid;*/
-        flex-direction: row;
-        justify-content: space-around;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.jumps div:hover p {
+    opacity: 1;
 }
