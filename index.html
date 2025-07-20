@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js"></script>>
   <link rel="icon" href="favicon.ico" />
   <title>Robomovio | Homepage</title>
   <!-- Leaflet CSS & JS -->
@@ -45,7 +46,7 @@
   </div>
   <div class="content">
     <h1 id="start">Welcome to our homepage!</h1>
-    <!-- <section tabindex=0 class="anchor" id="section_test">
+    <section tabindex=0 class="anchor" id="section_test">
       <h1 class="section-title">Test</h1>
       <p>Hello</p>
       <h1>Hello</h1>
@@ -54,7 +55,7 @@
       <h4>Hello</h4>
       <h5>Hello</h5>
       <h6>Hello</h6>
-    </section> -->
+    </section>
     <section tabindex=0 class="anchor" id="section_home">
       <h1 class="section-title">Home</h1>
       <p>
@@ -147,13 +148,14 @@
         <div class="indent">
           <p>We first think about these three main parts: </p>
           <ul class="decimal">
-            <li>How should the robot move?</li>
-            <li>How should the robot interact with the environment?</li>
-            <li>How should the robot detect obstacles / sense other influences?</li>
+            <li><a href="#section_engineering_defining_attributes_robot_movement">How should the robot move?</a></li>
+            <li><a href="#section_engineering_defining_attributes_robot_interaction">How should the robot interact with the environment?</a></li>
+            <li><a href="#section_engineering_defining_attributes_robot_sense">How should the robot detect obstacles / sense other influences?</a></li>
           </ul>
-          <h4>1. Moving</h4>
-          <div class="indent">
-            <p>Well, for moving, the robot needs wheels. The wheels have to be powered by motors. So, we could either use a
+          <h4 class="anchor" id="section_engineering_defining_attributes_robot_movement">1. Movement</h4>
+          <div class="indent collapse">
+            <p>Well, for moving, the robot needs wheels. The wheels have to be powered by motors. So, we could either
+              use a
             </p>
             <ul>
               <li>tank driven robot (2 wheels, next to each other and a wheel / marble, stabilizes the robot)</li>
@@ -164,39 +166,55 @@
             <p>We chose the first approach because it only needs two wheels and a marble (which are included in the
               standard spike prime set) and because the other option is very difficult to build.
             </p>
+            <img src="" class="img" alt="Robot base sketch">
           </div>
-          <h4>2. Interaction</h4>
-          <div class="indent">
+          <h4 class="anchor" id="section_engineering_defining_attributes_robot_interaction">2. Interaction</h4>
+          <div class="indent collapse">
             <p>
-              For the interaction, the robot needs motors + specific arms or mechanical mechanisms to solve the stations <br> 
+              For the interaction, the robot needs motors + specific arms or mechanical mechanisms to solve the
+              stations.
               Every station is different and we can only use up to 4 motors. So it's very important to reuse the motors.
+              <br><br>
+              We already use 2 motors for moving so we can effectively use the 2 other motors. There are 2 ways:
             </p>
             <ul>
-              <li>tank driven robot (2 wheels, next to each other and a wheel / marble, stabilizes the robot)</li>
-              <li>or a robot with a steering like a car (2 wheels at the back (move the robot forwards) and 1 - 2 wheels
-                steering)
+              <li>Build one arm which could solve all tasks</li>
+              <li>Build different extensions which use a specific interface to connnect to the robot and the motors
               </li>
             </ul>
-            <p>We chose the first approach because it only needs two wheels and a marble (which are included in the
-              standard spike prime set) and because the other option is very difficult to build.
+            <p>The second approach is definitely the best because these extensions can vary between the task and exactly
+              fit with it.
             </p>
+            <img src="" class="img" alt="Robot-extension interface">
           </div>
-          <h4>3. Sensing</h4>
-          <div class="indent">
+          <h4 class="anchor" id="section_engineering_defining_attributes_robot_sense">3. Sense</h4>
+          <div class="indent collapse">
             <p>
-              Lets assume the robot motors have a lot of friction <br> 
-              Every station is different and we can only use 
+              Let's assume the extension motors have a lot of friction and the task isn't aligned properly to the map.
+              The ground could be very unconsistent and slippery to. <br>
+              If you now run your working code on the robot, it will completely mess up. So what to do? <br><br>
+              <strong>Use sensors!</strong><br><br>
+              Following sensor types are available for us:
             </p>
             <ul>
-              <li>tank driven robot (2 wheels, next to each other and a wheel / marble, stabilizes the robot)</li>
-              <li>or a robot with a steering like a car (2 wheels at the back (move the robot forwards) and 1 - 2 wheels
-                steering)
+              <li>Touchsensor: <br>
+              (detects pressure on the button at the front)</li>
+              <li>Colorsensor<br>
+                (detects colors, light reflection / brightness)
               </li>
+              <li>Distance- / Ultrasonicsensor: <br>
+                (measures distance / Sends and recieves signals with ultrasonic
+                frequencies)</li>
+              <li>Gyrosensor: <br>
+                (measures angular velocity, motion and orientation)</li>
             </ul>
-            <p>We chose the first approach because it only needs two wheels and a marble (which are included in the
-              standard spike prime set) and because the other option is very difficult to build.
-              
+            <p>We can use any combination and count of these sensors.<br>
+              <strong>But:</strong><br>
+              We already use 4 motors and the spike prime hub has just 6 ports, so 2 connections left for sensors.<br>
+              We don't need an external Gyro because the Spike Prime has one integrated. After a bit of brainstorming it became clear that we should use two color sensors for aligning the robot at lines next to tasks and to follow lines. But we're still not sure if we should attach each next to one wheel for alignment or at the front of the robot to follow lines.
             </p>
+            <img src="" class="img" alt="Colorsensor position for line-following">
+            <img src="" class="img" alt="Colorsensor position for alignment">
           </div>
         </div>
       </div>

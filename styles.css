@@ -15,6 +15,7 @@ html {
     --text-color-highlight: #c395ff;
     --topbar-color: color-mix(in srgb, var(--purple), transparent 20%);
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -31,7 +32,7 @@ body {
 a {
     color: var(--text-color);
     text-decoration: underline;
-    transition: all 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
 }
 
 a:hover {
@@ -47,12 +48,19 @@ a:hover {
     box-shadow: 0px 0px 5px 0px var(--shadow-color);
     width: 100%;
 }
+
 .img.no_corner-radius {
     border-radius: 0;
 }
+.img-caption {
+    font-size: 0.5em;
+    color: var(--text-color);
+    margin-top: 4px;
+}
+
 /* Anchor links */
 .anchor {
-    transition: all 0.15s ease-in-out;
+    transition: cplor 0.15s ease-in-out;
 }
 
 section.anchor:target {
@@ -69,8 +77,31 @@ h6.anchor:target {
     color: var(--text-color-highlight);
 }
 
+.indent-toggle {
+    font-size: 0.7em;
+    color: var(--text-color);
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--section-border-color-highlight);
+    background: var(--section-background-color-highlight);
+    margin: auto;
+    margin-left: 2em;
+    padding: 3px 7px;
+    border-radius: 4px;
+}
+
 .indent {
+    max-height: 100%;
+    opacity: 1;
     padding-left: 40px;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.indent.collapse {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Jumps to sections */
@@ -87,7 +118,7 @@ h6.anchor:target {
 }
 
 .jumps div {
-    transition: all 0.3s ease-in-out;
+    transition: padding-right 0.3s ease-in-out, max-width 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -112,7 +143,7 @@ h6.anchor:target {
 }
 
 .jumps div p {
-    transition: all 0.3s ease-in-out 0.15s;
+    transition: opacity 0.3s ease-in-out 0.15s;
     padding: 0;
     margin: 0;
     opacity: 0;
@@ -155,13 +186,16 @@ h6.anchor:target {
 
 
 .content {
-    font-size: clamp(1.6rem, 2vw, 2.9rem);
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
     margin-top: 100px;
     overflow: hidden;
 }
 
-.content p, span, li, a {
-    font-size: clamp(0.9rem, 1.2vw, 1.9rem);
+.content p,
+span,
+li,
+a {
+    font-size: clamp(0.9rem, 2.2vw, 1.2rem);
 }
 
 .content section {
@@ -182,41 +216,51 @@ h6.anchor:target {
     font-size: 2em;
     text-align: center;
 }
+
 .map {
     height: 40vw;
     margin: min(8vw, 150px);
     width: auto;
 }
+
 @media screen and (max-width: 600px) {
     .map {
         margin: 0px;
     }
 }
+
 .map span {
     font-size: 18px;
 }
+
 .image-grid {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
 ul {
     margin: 0;
 }
+
 ul.decimal {
     list-style-type: decimal;
 }
+
 ul.upper-alphabetic {
     list-style-type: upper-latin;
 }
+
 ul.lower-alphabetic {
     list-style-type: lower-latin;
 }
+
 .popup {
     position: relative;
     display: inline-block;
     border-bottom: white 2px solid;
 }
+
 .popup .popuptext {
     visibility: hidden;
     width: 120px;
@@ -233,6 +277,7 @@ ul.lower-alphabetic {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 .popup .popuptext::after {
     content: "";
     position: absolute;
@@ -243,6 +288,7 @@ ul.lower-alphabetic {
     border-style: solid;
     border-color: #2d0038 transparent transparent transparent;
 }
+
 .popup:hover .popuptext {
     visibility: visible;
     opacity: 1;
