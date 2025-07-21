@@ -7,30 +7,32 @@ document.addEventListener("DOMContentLoaded", () => {
         // Check if it's a heading (h1–h6)
         if (heading && /^H[1-6]$/.test(heading.tagName)) {
             heading.style.display = 'flex';
-            heading.style.setProperty('align-items', 'baseline');
+            heading.style.setProperty('align-items', 'center');
             const toggle = document.createElement("span");
             toggle.className = "indent-toggle";
             const isCollapsed = section.classList.contains("collapse");
-            toggle.textContent = isCollapsed ? "Show" : "Hide";
+            toggle.textContent = isCollapsed ? "▶" : "▼";
+            toggle.title = isCollapsed ? "Expand" : "Hide";
 
             toggle.addEventListener("click", () => {
                 const isCollapsed = section.classList.contains("collapse");
                 section.classList.toggle("collapse");
-                toggle.textContent = isCollapsed ? "Hide" : "Show";
+                toggle.textContent = isCollapsed ? "▼" : "▶";
+            toggle.title = isCollapsed ? "Reduce" : "Expand";
             });
 
-            heading.appendChild(toggle);
+            heading.prepend(toggle);
         }
     });
 
     //Display the alt text under an image
     document.querySelectorAll(".img").forEach(image => {
         const alt = image.getAttribute('alt');
-        if (alt) {
+        if (alt && image.getAttribute('src')) {
             const caption = document.createElement('div');
             caption.textContent = alt;
             caption.className = 'img-caption';
-            img.after(caption);
+            image.after(caption);
         }
     });
 });
