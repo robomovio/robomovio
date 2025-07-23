@@ -7,18 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // Check if it's a heading (h1–h6)
         if (heading && /^H[1-6]$/.test(heading.tagName)) {
             heading.style.display = 'flex';
-            heading.style.setProperty('align-items', 'center');
-            const toggle = document.createElement("span");
-            toggle.className = "indent-toggle";
+            heading.style.alignItems= 'center';
+            const toggle = document.createElement("i");
+            toggle.style.marginRight = '5px';
+            toggle.style.width = '20px';
             const isCollapsed = section.classList.contains("collapse");
-            toggle.textContent = isCollapsed ? "▶" : "▼";
+            toggle.classList = "fa fa-caret-" + (isCollapsed ? "right" : "down");
             toggle.title = isCollapsed ? "Expand" : "Hide";
 
             toggle.addEventListener("click", () => {
-                const isCollapsed = section.classList.contains("collapse");
                 section.classList.toggle("collapse");
-                toggle.textContent = isCollapsed ? "▼" : "▶";
-            toggle.title = isCollapsed ? "Reduce" : "Expand";
+                const isCollapsed = section.classList.contains("collapse");
+                toggle.classList = "fa fa-caret-" + (isCollapsed ? "right" : "down");
+                toggle.title = isCollapsed ? "Expand" : "Hide";
             });
 
             heading.prepend(toggle);

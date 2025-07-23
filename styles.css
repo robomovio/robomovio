@@ -52,18 +52,6 @@ section.anchor:target {
 *:not(section).anchor:target {
     color: var(--text-color-highlight);
 }
-
-.indent-toggle {
-    font-size: 0.6em;
-    color: var(--text-color);
-    cursor: pointer;
-    user-select: none;
-    margin: 0;
-    height: 100%;
-    width: 1em;
-    margin-right: 0.5em;
-}
-
 .indent {
     max-height: 100%;
     opacity: 1;
