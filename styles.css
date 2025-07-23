@@ -19,8 +19,10 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-image: var(--background-color);
     color: var(--text-color);

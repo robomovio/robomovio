@@ -10,16 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
             heading.style.alignItems= 'center';
             const toggle = document.createElement("i");
             toggle.style.marginRight = '5px';
-            toggle.style.width = '20px';
             const isCollapsed = section.classList.contains("collapse");
-            toggle.classList = "fa fa-caret-" + (isCollapsed ? "right" : "down");
-            toggle.title = isCollapsed ? "Expand" : "Hide";
+            toggle.classList = "fa fa-fw fa-caret-" + (isCollapsed ? "right" : "down");
+            toggle.title = isCollapsed ? "Expand" : "Collapse";
 
             toggle.addEventListener("click", () => {
                 section.classList.toggle("collapse");
                 const isCollapsed = section.classList.contains("collapse");
-                toggle.classList = "fa fa-caret-" + (isCollapsed ? "right" : "down");
-                toggle.title = isCollapsed ? "Expand" : "Hide";
+                toggle.classList = "fa fa-fw fa-caret-" + (isCollapsed ? "right" : "down");
+                toggle.title = isCollapsed ? "Expand" : "Collapse";
             });
 
             heading.prepend(toggle);
