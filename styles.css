@@ -58,22 +58,24 @@ section.anchor:target {
     color: var(--text-color);
     cursor: pointer;
     user-select: none;
-    /*border: 1px solid var(--section-border-color-highlight);
-    background: var(--section-background-color-highlight);*/
     margin: 0;
     height: 100%;
     width: 1em;
     margin-right: 0.5em;
-    padding: 3px 7px;
-    border-radius: 4px;
 }
 
 .indent {
     max-height: 100%;
     opacity: 1;
-    padding-left: 40px;
+    margin-left: min(6.5vw, 60px);
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .indent {
+        margin-left: 4vw;
+    }
 }
 
 .indent.collapse {
