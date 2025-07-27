@@ -406,7 +406,14 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
 }
+
+
 
 .link-title {
     font-weight: 600;
