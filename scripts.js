@@ -19,13 +19,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Scroll animations
+// scroll animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
+    console.log(entries);
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
@@ -66,16 +67,6 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
-
-// Header background change on scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-    } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-    }
-});
 
 // Initialize map
 function initMap() {
@@ -144,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(initMap, 500);
 });
 
-// Add some initial animations
+// preload hero section to get starting animation
 window.addEventListener('load', () => {
     document.querySelector('.hero-content').classList.add('visible');
 });
