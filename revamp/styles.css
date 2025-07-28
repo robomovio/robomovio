@@ -525,8 +525,8 @@ body {
     transform: translateY(0);
 }
 
-/* Floating Action Button */
-.fab {
+
+.floating-btn {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -543,7 +543,7 @@ body {
     z-index: 1000;
 }
 
-.fab:hover {
+.floating-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
