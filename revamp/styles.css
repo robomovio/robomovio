@@ -5,9 +5,9 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --secondary: #8b5cf6;
-    --accent: #06b6d4;
+    --primary: rgb(70, 20, 136);
+    --secondary: rgb(243, 41, 15);
+    --accent: rgb(246, 0, 12);
     --dark: #0f172a;
     --light: #f8fafc;
     --gray-100: #f1f5f9;
