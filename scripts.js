@@ -141,7 +141,6 @@ function initMap() {
 
 // Initialize map when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    // Delay map initialization to ensure proper loading
     setTimeout(initMap, 500);
 });
 
