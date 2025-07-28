@@ -547,3 +547,32 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
+
+
+.submit-btn {
+    font-family: 'Inter', sans-serif;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    resize: vertical;
+
+}
+
+.submit-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
