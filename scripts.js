@@ -149,3 +149,22 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     document.querySelector('.hero-content').classList.add('visible');
 });
+
+
+// contact form w ith EmailJS
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const status = document.getElementById('contact-status');
+    status.textContent = 'Sending...';
+
+    emailjs.sendForm('service_lmzfqas', 'template_bw0zk5n', this)
+        .then(() => {
+            status.style.color = 'var(--success)';
+            status.textContent = 'Message sent successfully!';
+            this.reset();
+        }, (err) => {
+            status.style.color = 'var(--error)';
+            status.textContent = 'Failed to send. Try again later.';
+            console.error('EmailJS error:', err);
+        });
+});

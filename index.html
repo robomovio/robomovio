@@ -12,6 +12,12 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function(){
+        emailjs.init("ATtr2kSr6UVKI0V0H");
+    })();
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -269,10 +275,29 @@
         </div>
     </section>
 
-    <!-- Floating Action Button -->
+    <!-- floating Action Button -->
     <button class="floating-btn" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- contact Section -->
+    <section class="section" id="contact">
+    <div class="container">
+        <div class="section-header fade-in">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Got questions or ideas? Send us a message!</p>
+        </div>
+
+        <form id="contact-form" class="card fade-in">
+        <input type="text" name="user_name" placeholder="Your Name" required style="margin-bottom: 1rem; width: 100%; padding: 1rem; border-radius: 10px; border: 1px solid var(--gray-300);" />
+        <input type="email" name="user_email" placeholder="Your Email" required style="margin-bottom: 1rem; width: 100%; padding: 1rem; border-radius: 10px; border: 1px solid var(--gray-300);" />
+        <textarea name="message" placeholder="Your Message" required rows="5" style="margin-bottom: 1rem; width: 100%; padding: 1rem; border-radius: 10px; border: 1px solid var(--gray-300); resize: vertical;"></textarea>
+        <button type="submit" style="padding: 1rem 2rem; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 600;">Send</button>
+        <p id="contact-status" style="margin-top: 1rem;"></p>
+        </form>
+    </div>
+    </section>
+
 
     <script src="scripts.js"></script>
 </body>
