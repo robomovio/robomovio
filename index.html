@@ -1,246 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="scripts.js"></script>>
-  <link rel="icon" href="favicon.ico" />
-  <title>Robomovio | Homepage</title>
-  <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robomovio | Modern FLL Team</title>
+    <!-- some seo-->
+    <meta name="description" content="Official website of the robotics team from Regensburg competing in the FIRST LEGO League with SPIKE Prime robots.">
+    <meta name="keywords" content="Robotics Team, FIRST LEGO League, Regensburg, SPIKE Prime, LEGO Robotics, FLL, students, STEM, programming, robot competition, submerged, unearthed">
 
-  <!-- FontAwesome (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <!-- Leaflet.AwesomeMarkers -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.css" />
-  <script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.js"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6G19680G70"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6G19680G70');
-</script>
 <body>
-  <div id="topbar" onclick="window.scrollTo(0, 0)">
-    <img src="ROBOMOVIO.png" />
-    <img src="favicon.ico" />
-  </div>
-  <div class="jumps">
-    <div onclick="window.location.href='#section_home'"><i class="fa fa-home"></i>
-      <p>Home</p>
-    </div>
-    <div onclick="window.location.href='#section_about'"><i class="fa fa-info-circle"></i>
-      <p>About</p>
-    </div>
-    <div onclick="window.location.href='#section_members'"><i class="fa fa-user-circle"></i>
-      <p>Members</p>
-    </div>
-    <div onclick="window.location.href='#section_engineering'"><i class="fa fa-gear"></i>
-      <p>Engineering</p>
-    </div>
-    <div onclick="window.location.href='#section_links'"><i class="fa fa-share-alt"></i>
-      <p>Links</p>
-    </div>
-  </div>
-  <div class="content">
-    <h1 id="start">Welcome to our homepage!</h1>
-    <section tabindex=0 class="anchor" id="section_test">
-      <h1 class="section-title">Test</h1>
-      <p>Hello</p>
-      <h1>Hello</h1>
-      <h2>Hello</h2>
-      <h3>Hello</h3>
-      <h4>Hello</h4>
-      <h5>Hello</h5>
-      <h6>Hello</h6>
-    </section>
-    <section tabindex=0 class="anchor" id="section_home">
-      <h1 class="section-title">Home</h1>
-      <p>
-        We are a team of students which participates in the FLL (First Lego League) competition. <br>
-        We design and build a robot out of lego bricks, code and upload a script and hope it works 😂<br>
-        We are excited to compete with the other teams!
-      </p>
-      <p>
-        Check out the official FLL website for more information about the competition:
-        <a target="_blank" href="https://www.first-lego-league.org/">https://www.first-lego-league.org/</a>.
-      </p>
-      <p>
-        On this website, you can find information about our team, our members and stuff we made.
-      </p>
-      <div class="image-grid">
-        <img src="" alt="Our Logo" class="img" />
-        <img src="" alt="FLL Logo" class="img" />
-      </div>
-    </section>
-    <section tabindex=0 class="anchor" id="section_about">
-      <h1 class="section-title">About Us</h1>
-      <p>
-        Were are a german team from Regensburg, Bavaria.
-      </p>
-      <h2>Map of our Location:</h2>
-      <div class="map img" id="member_map"></div>
-      <script src="map.js"></script>
-    </section>
-    <section tabindex=0 class="anchor" id="section_members">
-      <h1 class="section-title">Members</h1>
-      <p>
-        Our members are:
-      </p>
-      <ul>
-        <li>Andrei</li>
-        <li>Niko</li>
-        <li>Ferdinand</li>
-        <li>Niklas</li>
-        <li>Leo</li>
-        <li>Luca (Coach)</li>
-      </ul>
-      <p>
-        In our team, there arent any specific roles for each member, we all work together on the robot and the code.
-      </p>
-      <img src="" alt="Team Photo" class="img" />
-    </section>
-    <section tabindex=0 class="anchor" id="section_engineering">
-      <h1 class="section-title">Engineering</h1>
-      <img src="" alt="Random Engineering Note" class="img" />
-      <p>
-        This section covers the process of
-      </p>
-      <ul>
-        <li><a href="#section_engineering_defining_attributes">Defining attributes</a></li>
-        <ul>
-          <li><a href="#section_engineering_defining_attributes_robot">For the robot</a></li>
-          <li><a href="#section_engineering_defining_attributes_code">For the code</a></li>
-        </ul>
-        <li><a href="#section_engineering_designing_robot">Designing the robot</a></li>
-        <li><a href="#section_engineering_building_robot">Building the robot</a></li>
-        <li><a href="#section_engineering_programming_robot">Programming the robot</a></li>
-        <li><a href="#section_engineering_testing_debugging">Testing and debugging</a></li>
-      </ul>
-      <p>
-        And stuff from all the seasons we participated in.
-      </p>
-      <ul>
-        <li><a href="#section_engineering_season_2024_2025_submerged">Season 2024/2025: SUBMERGED</a></li>
-        <ul>
-          <li><a href="#section_engineering_season_2024_2025_submerged_about">About</a></li>
-          <li><a href="#section_engineering_season_2024_2025_submerged_run_1">Run 1</a></li>
-          <li><a href="#section_engineering_season_2024_2025_submerged_run_2">Run 2</a></li>
-          <li><a href="#section_engineering_season_2024_2025_submerged_run_3">Run 3</a></li>
-          <li><a href="#section_engineering_season_2024_2025_submerged_run_4">Run 4</a></li>
-        </ul>
-        <li><a href="#section_engineering_season_2025_2026_unearthered">Season 2025/2026: UNEARTHED (this season)</a>
-        </li>
-        <ul>
-          <li><a href="#section_engineering_season_2025_2026_unearthered_about">About</a></li>
-          <li><a href="#section_engineering_season_2025_2026_unearthered_run_1">Run 1</a></li>
-          <li><a href="#section_engineering_season_2025_2026_unearthered_run_2">Run 2</a></li>
-          <li><a href="#section_engineering_season_2025_2026_unearthered_run_3">Run 3</a></li>
-          <li><a href="#section_engineering_season_2025_2026_unearthered_run_4">Run 4</a></li>
-        </ul>
-      </ul>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-robot"></i>
+                Robomovio
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#engineering" class="nav-link">Engineering</a></li>
+                <li><a href="#links" class="nav-link">Links</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
-      <h2 id="section_engineering_defining_attributes" class="anchor">Defining attributes</h2>
-      <div class="indent">
-        <h3 id="section_engineering_defining_attributes_robot" class="anchor">For the robot</h3>
-        <div class="indent">
-          <p>We first think about these three main parts: </p>
-          <ul class="decimal">
-            <li><a href="#section_engineering_defining_attributes_robot_movement">How should the robot move?</a></li>
-            <li><a href="#section_engineering_defining_attributes_robot_interaction">How should the robot interact with the environment?</a></li>
-            <li><a href="#section_engineering_defining_attributes_robot_sense">How should the robot detect obstacles / sense other influences?</a></li>
-          </ul>
-          <h4 class="anchor" id="section_engineering_defining_attributes_robot_movement">1. Movement</h4>
-          <div class="indent collapse">
-            <p>Well, for moving, the robot needs wheels. The wheels have to be powered by motors. So, we could either
-              use a
-            </p>
-            <ul>
-              <li>tank driven robot (2 wheels, next to each other and a wheel / marble, stabilizes the robot)</li>
-              <li>or a robot with a steering like a car (2 wheels at the back (move the robot forwards) and 1 - 2 wheels
-                steering)
-              </li>
-            </ul>
-            <p>We chose the first approach because it only needs two wheels and a marble (which are included in the
-              standard spike prime set) and because the other option is very difficult to build.
-            </p>
-            <img src="" class="img" alt="Robot base sketch">
-          </div>
-          <h4 class="anchor" id="section_engineering_defining_attributes_robot_interaction">2. Interaction</h4>
-          <div class="indent collapse">
-            <p>
-              For the interaction, the robot needs motors + specific arms or mechanical mechanisms to solve the
-              stations.
-              Every station is different and we can only use up to 4 motors. So it's very important to reuse the motors.
-              <br><br>
-              We already use 2 motors for moving so we can effectively use the 2 other motors. There are 2 ways:
-            </p>
-            <ul>
-              <li>Build one arm which could solve all tasks</li>
-              <li>Build different extensions which use a specific interface to connnect to the robot and the motors
-              </li>
-            </ul>
-            <p>The second approach is definitely the best because these extensions can vary between the task and exactly
-              fit with it.
-            </p>
-            <img src="" class="img" alt="Robot-extension interface">
-          </div>
-          <h4 class="anchor" id="section_engineering_defining_attributes_robot_sense">3. Sense</h4>
-          <div class="indent collapse">
-            <p>
-              Let's assume the extension motors have a lot of friction and the task isn't aligned properly to the map.
-              The ground could be very unconsistent and slippery to. <br>
-              If you now run your working code on the robot, it will completely mess up. So what to do? <br><br>
-              <strong>Use sensors!</strong><br><br>
-              Following sensor types are available for us:
-            </p>
-            <ul>
-              <li>Touchsensor: <br>
-              (detects pressure on the button at the front)</li>
-              <li>Colorsensor<br>
-                (detects colors, light reflection / brightness)
-              </li>
-              <li>Distance- / Ultrasonicsensor: <br>
-                (measures distance / Sends and recieves signals with ultrasonic
-                frequencies)</li>
-              <li>Gyrosensor: <br>
-                (measures angular velocity, motion and orientation)</li>
-            </ul>
-            <p>We can use any combination and count of these sensors.<br>
-              <strong>But:</strong><br>
-              We already use 4 motors and the spike prime hub has just 6 ports, so 2 connections left for sensors.<br>
-              We don't need an external Gyro because the Spike Prime has one integrated. After a bit of brainstorming it became clear that we should use two color sensors for aligning the robot at lines next to tasks and to follow lines. But we're still not sure if we should attach each next to one wheel for alignment or at the front of the robot to follow lines.
-            </p>
-            <img src="" class="img" alt="Colorsensor position for line-following">
-            <img src="" class="img" alt="Colorsensor position for alignment">
-          </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in">
+            <h1>Welcome to Robomovio</h1>
+            <p>We are a passionate team of students competing in the FIRST Lego League, designing and building robots that push the boundaries of creativity and engineering.</p>
+            <a href="#about" class="cta-button">
+                Discover Our Journey
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-      </div>
     </section>
-    <section tabindex=0 class="anchor" id="section_links">
-      <h1 class="section-title">Links</h1>
-      <p>
-        Here are some links to our social media accounts, platforms we use and other useful resources:
-      </p>
-      <ul>
-        <li><a class="anchor" id="links_github" href="https://www.github.com/robomovio/">GitHub (File management)</a>
-        </li>
-        <li><a class="anchor" id="links_figma" href="https://www.figma.com">Figma (Graphics Design)</a></li>
-        <li><a class="anchor" id="links_lego_studio" href="https://store.bricklink.com/v2/studio/download.page">Lego
-            Studio (Lego Design)</a></li>
-      </ul>
-    </section>
-  </div>
-</body>
 
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">About Our Team</h2>
+                <p class="section-subtitle">We are a German team from Regensburg, Bavaria, passionate about robotics and innovation</p>
+            </div>
+            
+            <div class="grid grid-2 fade-in">
+                <div class="card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">
+                        <i class="fas fa-trophy" style="margin-right: 0.5rem;"></i>
+                        Our Mission
+                    </h3>
+                    <p>We design and build robots out of LEGO bricks, code innovative scripts, and compete with teams from around the world. Our goal is to push the boundaries of what's possible with LEGO robotics while having fun and learning together.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">
+                        <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+                        Team Collaboration
+                    </h3>
+                    <p>In our team, there aren't any specific roles for each member - we all work together on the robot design, programming, and strategy. This collaborative approach helps us learn from each other and create better solutions.</p>
+                </div>
+            </div>
+
+            <div class="fade-in">
+                <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--gray-900);">Our Location</h3>
+                <div class="map-container">
+                    <div id="member_map"></div>
+                </div>
+            </div>
+
+            <div class="card fade-in" style="margin-top: 3rem; text-align: center;">
+                <p style="margin-bottom: 1rem;">Learn more about the FIRST Lego League competition:</p>
+                <a href="https://www.first-lego-league.org/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                    <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>
+                    Visit Official FLL Website
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" id="team" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">The brilliant minds behind Robomovio</p>
+            </div>
+            
+            <div class="team-grid fade-in">
+                <div class="team-member">
+                    <div class="team-avatar">A</div>
+                    <div class="team-name">Andrei</div>
+                    <div class="team-role">Team Member</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">N</div>
+                    <div class="team-name">Niko</div>
+                    <div class="team-role">Team Member</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">F</div>
+                    <div class="team-name">Ferdinand</div>
+                    <div class="team-role">Team Member</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">N</div>
+                    <div class="team-name">Niklas</div>
+                    <div class="team-role">Team Member</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">L</div>
+                    <div class="team-name">Leo</div>
+                    <div class="team-role">Team Member</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar" style="background: var(--accent);">L</div>
+                    <div class="team-name">Luca</div>
+                    <div class="team-role">Coach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Section -->
+    <section class="section" id="engineering">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Engineering Process</h2>
+                <p class="section-subtitle">How we design, build, and program our robots</p>
+            </div>
+
+            <div class="engineering-content fade-in">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Defining Attributes</h3>
+                            <p>We start by defining how our robot should move, interact with the environment, and sense obstacles. This foundational step guides all our design decisions.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Robot Design</h3>
+                            <p>Using our defined attributes, we create detailed designs that optimize for both functionality and the constraints of FLL competitions.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Building</h3>
+                            <p>We construct our robot using LEGO Spike Prime components, focusing on reliability, modularity, and ease of maintenance during competitions.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Programming</h3>
+                            <p>We develop robust code that handles various scenarios and environmental conditions, ensuring consistent performance across multiple runs.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Testing & Debugging</h3>
+                            <p>Continuous testing and refinement help us identify issues early and optimize our robot's performance for competition day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin: 3rem 0 2rem; color: var(--gray-900);">Robot Design Considerations</h3>
+                
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span><i class="fas fa-cog" style="margin-right: 0.5rem; color: var(--primary);"></i>Movement System</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="collapsible-content">
+                        <p>We chose a tank-driven robot with two wheels positioned next to each other and a stabilizing marble. This approach only requires two motors from our limited set and provides excellent maneuverability compared to car-like steering systems that are much more complex to build.</p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span><i class="fas fa-robot" style="margin-right: 0.5rem; color: var(--secondary);"></i>Interaction Mechanisms</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="collapsible-content">
+                        <p>With only 4 motors available and 2 used for movement, we designed modular extensions that use a standardized interface. This allows us to swap between task-specific attachments rather than building one complex arm that tries to solve everything.</p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span><i class="fas fa-eye" style="margin-right: 0.5rem; color: var(--accent);"></i>Sensor Integration</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="collapsible-content">
+                        <p>We use two color sensors for line following and robot alignment, plus the integrated gyroscope in the Spike Prime hub. The color sensors help us maintain precise positioning even when the playing field conditions vary.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 3rem 0 2rem; color: var(--gray-900);">Competition Seasons</h3>
+                
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4 style="color: var(--primary); margin-bottom: 1rem;">
+                            <i class="fas fa-water" style="margin-right: 0.5rem;"></i>
+                            2024/2025: SUBMERGED
+                        </h4>
+                        <p>Our previous season focused on underwater exploration challenges, where we developed innovative solutions for ocean-themed missions.</p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: var(--secondary); margin-bottom: 1rem;">
+                            <i class="fas fa-mountain" style="margin-right: 0.5rem;"></i>
+                            2025/2026: UNEARTHED
+                        </h4>
+                        <p>This current season challenges us with earth and geology-themed missions, pushing us to create new mechanisms and strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section class="section" id="links" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Resources & Links</h2>
+                <p class="section-subtitle">Tools and platforms we use for our robotics journey</p>
+            </div>
+            
+            <div class="links-grid fade-in">
+                <a href="https://www.github.com/robomovio/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-github fa-fw"></i>
+                    </div>
+                    <div class="link-title">GitHub</div>
+                    <div class="link-description">Code repository and project management</div>
+                </a>
+                
+                <a href="https://www.figma.com" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-figma fa-fw"></i>
+                    </div>
+                    <div class="link-title">Figma</div>
+                    <div class="link-description">Design and prototyping platform</div>
+                </a>
+                
+                <a href="https://store.bricklink.com/v2/studio/download.page" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-cubes fa-fw"></i>
+                    </div>
+                    <div class="link-title">LEGO Studio</div>
+                    <div class="link-description">3D LEGO building and design tool</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    <button class="floating-btn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
