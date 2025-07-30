@@ -17,7 +17,8 @@ document.querySelectorAll('.nav-link').forEach(link => {
         icon.classList.add('fa-bars');
         icon.classList.remove('fa-times');
     });
-});
+}); 
+
 
 // scroll animations
 const observerOptions = {
